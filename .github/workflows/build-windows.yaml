@@ -1,0 +1,31 @@
+name: Build app for Windows
+
+on: [push]
+
+env:
+  APP_DIR: app
+
+jobs:
+  build:
+    name: Build app
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ github.repository }}
+        path: ${{ env.APP_DIR }}
+
+    - name: Install dependencies
+      working-directory: ${{ env.APP_DIR }}
+      run: pip install -r requirements.txt
+
+    - name: Build
+      working-directory: ${{ env.APP_DIR }}
+      run: python ./scripts/build.py
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: download-windows
+        path: ${{ env.APP_DIR }}/dist/
