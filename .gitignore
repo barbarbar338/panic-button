@@ -4,4 +4,3 @@ build
 dist
 *.spec
 panic.zip
-out

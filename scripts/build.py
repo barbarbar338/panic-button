@@ -26,13 +26,6 @@ def build():
     print("📌 copying assets to dist")
     shutil.copytree("assets", "dist/assets")
 
-    print("🚧 Creating zip output")
-    shutil.make_archive("panic", "zip", "dist")
-
-    print("📌 copying everything to output")
-    shutil.copytree("dist", "out")
-    shutil.copy("panic.zip", "out/panic.zip")
-
     print("🎈 Build successfull")
 
 

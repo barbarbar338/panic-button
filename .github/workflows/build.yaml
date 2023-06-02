@@ -27,5 +27,5 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: out
-        path: ${{ env.APP_DIR }}/out/
+        name: download-me
+        path: ${{ env.APP_DIR }}/dist/
