@@ -17,6 +17,8 @@ def build():
             "--onefile",
             "--noconsole",
             "--icon=assets/favicon.ico",
+            "--hidden-import",
+            "pkg_resources",
             "--name",
             "panic",
             "main.py",

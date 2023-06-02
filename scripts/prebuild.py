@@ -13,5 +13,6 @@ def prebuild():
     if os.path.isdir("build"):
         shutil.rmtree("build")
 
+
 if __name__ == "__main__":
     prebuild()
