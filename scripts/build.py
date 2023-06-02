@@ -9,7 +9,7 @@ def build():
     prebuild()
     format()
 
-    print("🚧 Building")
+    print("Building")
 
     subprocess.call(
         [
@@ -23,10 +23,10 @@ def build():
         ]
     )
 
-    print("📌 copying assets to dist")
+    print("copying assets to dist")
     shutil.copytree("assets", "dist/assets")
 
-    print("🎈 Build successfull")
+    print("Build successfull")
 
 
 if __name__ == "__main__":
