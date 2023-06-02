@@ -2,7 +2,7 @@ import keyboard
 from infi.systray import SysTrayIcon
 
 
-def on_quit(tray):
+def on_quit(_):
     keyboard.unhook_all_hotkeys()
 
 
