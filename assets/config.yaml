@@ -1,0 +1,3 @@
+# Mevcut sekmeyi kapatıp yeni sekmeyi açmak için gerekli olan tuş kombinasyonu.
+# Tek bir tuş da olabilir (örn: q) veya birden çok tuş kombinasyonu da olabilir (örn: ctrl+alt+q)
+panic_key: q

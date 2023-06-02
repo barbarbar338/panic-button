@@ -1,0 +1,23 @@
+import os
+import shutil
+
+
+def prebuild():
+    print("🧹 Cleaning 'dist' directory")
+
+    if os.path.isdir("dist"):
+        shutil.rmtree("dist")
+
+    print("🧹 Cleaning 'build' directory")
+
+    if os.path.isdir("build"):
+        shutil.rmtree("build")
+
+    print("🧹 Cleaning 'out' directory")
+
+    if os.path.isdir("out"):
+        shutil.rmtree("out")
+
+
+if __name__ == "__main__":
+    prebuild()

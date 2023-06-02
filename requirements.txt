@@ -1,0 +1,6 @@
+pyyaml
+keyboard
+black
+pyinstaller
+infi.systray
+notify-py
