@@ -15,9 +15,17 @@ jobs:
       with:
         repository: ${{ github.repository }}
         path: ${{ env.APP_DIR }}
+
     - name: Install dependencies
       working-directory: ${{ env.APP_DIR }}
       run: pip install -r requirements.txt
+
     - name: Build
       working-directory: ${{ env.APP_DIR }}
       run: python ./scripts/build.py
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: out
+        path: ${{ env.APP_DIR }}/out/
