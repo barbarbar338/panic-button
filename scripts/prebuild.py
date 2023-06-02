@@ -13,11 +13,5 @@ def prebuild():
     if os.path.isdir("build"):
         shutil.rmtree("build")
 
-    print("Cleaning 'out' directory")
-
-    if os.path.isdir("out"):
-        shutil.rmtree("out")
-
-
 if __name__ == "__main__":
     prebuild()
