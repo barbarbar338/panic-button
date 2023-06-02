@@ -17,7 +17,7 @@ jobs:
         path: ${{ env.APP_DIR }}
 
     - name: Install wine
-      run: apt install wine
+      run: sudo apt install wine -y
 
     - name: Download Python for windows
       run: wget https://www.python.org/ftp/python/3.11.3/python-3.11.3-amd64.exe
